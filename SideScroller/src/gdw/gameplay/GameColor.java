@@ -14,7 +14,7 @@ public class GameColor {
 	private static final Color ORANGE = new Color(255, 166, 0);
 	private static final Color PINK = new Color(166, 0, 255);
 	private static final Color GREEN = new Color(0, 255, 0);
-	private static final Color WHITE = new Color(255, 255, 255);
+	private static final Color TRANSPARENT = new Color(0.0f, 0.0f, 0.0f, 0.0f);
 	private static final Color BLACK = new Color(91, 57, 38);
 
 	public GameColor(boolean r, boolean g, boolean b) 
@@ -54,7 +54,7 @@ public class GameColor {
 	public Color convertToGraphicsColor() 
 	{
 		if (!red && !yellow && !blue)
-			return WHITE;
+			return TRANSPARENT;
 		else if (red && !yellow && !blue)
 			return RED;
 		else if (!red && yellow && !blue)
